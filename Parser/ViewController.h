@@ -8,8 +8,14 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface ViewController : NSViewController
+@interface ViewController : NSViewController <NSTableViewDataSource , NSStackViewDelegate>
 
+@property (strong) IBOutlet NSTableView *keywordTable;
+@property (strong) IBOutlet NSTableView *operatorsTableView;
+@property (strong) IBOutlet NSTableView *specialSymbolsTable;
+@property (strong) IBOutlet NSTableView *identfiresTable;
+@property (strong) IBOutlet NSTableView *intliteralsTable;
+@property (strong) IBOutlet NSTableView *stringLiterals;
 
 @end
 

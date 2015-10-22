@@ -1,4 +1,12 @@
-
-ahmed ali is one of the best people i met ya wad ya gamed
-
-asd
+int gcd (int u, int v)
+{
+if (v == 0) return u;
+else return gcd (v,u-u/v*v);
+}
+void main (void)
+{
+int x; int y;
+write_int(gcd(x,y));
+string asd = "asd" ;
+int a_ = 12313;
+}

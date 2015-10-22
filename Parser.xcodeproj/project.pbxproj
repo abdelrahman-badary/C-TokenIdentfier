@@ -14,6 +14,9 @@
 		CEBB32161BD8CE140057566E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEBB32141BD8CE140057566E /* Main.storyboard */; };
 		CEBB32211BD8CE140057566E /* ParserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CEBB32201BD8CE140057566E /* ParserTests.m */; };
 		CEBB322C1BD8CE140057566E /* ParserUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = CEBB322B1BD8CE140057566E /* ParserUITests.m */; };
+		CEBB323A1BD8D41B0057566E /* parse.txt in Resources */ = {isa = PBXBuildFile; fileRef = CEBB32391BD8D41B0057566E /* parse.txt */; settings = {ASSET_TAGS = (); }; };
+		CEBB323D1BD8D5320057566E /* TextParser.m in Sources */ = {isa = PBXBuildFile; fileRef = CEBB323C1BD8D5320057566E /* TextParser.m */; settings = {ASSET_TAGS = (); }; };
+		CEBB32401BD8DC050057566E /* TokenIdentifier.m in Sources */ = {isa = PBXBuildFile; fileRef = CEBB323F1BD8DC050057566E /* TokenIdentifier.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,11 @@
 		CEBB32271BD8CE140057566E /* ParserUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ParserUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEBB322B1BD8CE140057566E /* ParserUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ParserUITests.m; sourceTree = "<group>"; };
 		CEBB322D1BD8CE140057566E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CEBB32391BD8D41B0057566E /* parse.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = parse.txt; sourceTree = "<group>"; };
+		CEBB323B1BD8D5320057566E /* TextParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextParser.h; sourceTree = "<group>"; };
+		CEBB323C1BD8D5320057566E /* TextParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextParser.m; sourceTree = "<group>"; };
+		CEBB323E1BD8DC050057566E /* TokenIdentifier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TokenIdentifier.h; sourceTree = "<group>"; };
+		CEBB323F1BD8DC050057566E /* TokenIdentifier.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TokenIdentifier.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,14 +107,19 @@
 		CEBB32081BD8CE140057566E /* Parser */ = {
 			isa = PBXGroup;
 			children = (
+				CEBB32391BD8D41B0057566E /* parse.txt */,
 				CEBB32091BD8CE140057566E /* AppDelegate.h */,
 				CEBB320A1BD8CE140057566E /* AppDelegate.m */,
 				CEBB320F1BD8CE140057566E /* ViewController.h */,
 				CEBB32101BD8CE140057566E /* ViewController.m */,
 				CEBB32121BD8CE140057566E /* Assets.xcassets */,
 				CEBB32141BD8CE140057566E /* Main.storyboard */,
+				CEBB323B1BD8D5320057566E /* TextParser.h */,
+				CEBB323C1BD8D5320057566E /* TextParser.m */,
 				CEBB32171BD8CE140057566E /* Info.plist */,
 				CEBB320C1BD8CE140057566E /* Supporting Files */,
+				CEBB323E1BD8DC050057566E /* TokenIdentifier.h */,
+				CEBB323F1BD8DC050057566E /* TokenIdentifier.m */,
 			);
 			path = Parser;
 			sourceTree = "<group>";
@@ -242,6 +255,7 @@
 			files = (
 				CEBB32131BD8CE140057566E /* Assets.xcassets in Resources */,
 				CEBB32161BD8CE140057566E /* Main.storyboard in Resources */,
+				CEBB323A1BD8D41B0057566E /* parse.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,6 +281,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEBB32111BD8CE140057566E /* ViewController.m in Sources */,
+				CEBB323D1BD8D5320057566E /* TextParser.m in Sources */,
+				CEBB32401BD8DC050057566E /* TokenIdentifier.m in Sources */,
 				CEBB320E1BD8CE140057566E /* main.m in Sources */,
 				CEBB320B1BD8CE140057566E /* AppDelegate.m in Sources */,
 			);

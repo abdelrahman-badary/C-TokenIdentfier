@@ -9,5 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @interface TextParser : NSObject
-
+-(id)initWithFile:(NSString *)file ;
+-(NSArray *)parseFile ;
+@property (nonatomic , strong) NSString * file ; 
 @end
