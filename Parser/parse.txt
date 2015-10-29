@@ -1,4 +1,6 @@
 int gcd (int u, int v)
+//ahmed ali mohammed
+//asdsds
 {
 if (v == 0) return u;
 else return gcd (v,u-u/v*v);
@@ -8,5 +10,6 @@ void main (void)
 int x; int y;
 write_int(gcd(x,y));
 string asd = "asd" ;
-int a_ = 12313;
+int a_123 = 12313;
+int asdsd = -2332 ;
 }

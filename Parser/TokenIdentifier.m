@@ -20,6 +20,7 @@
     NSMutableArray * identfires ;
     NSMutableArray * stringLiterals ;
     NSMutableArray * intLiterals ;
+    NSMutableArray * comments ;
     
 
 }
@@ -29,6 +30,7 @@
     if(self)
     {
         _contentsOfFile = fileContents ;
+        
         Keywords = @[@"int",@"bool" , @"string" , @"void" , @"true" , @"false" , @"if" , @"else" , @"while" , @"when" , @"return"] ;
         
         Operators = @[@"+" , @"-" , @"*" , @"/" , @"<" , @"<=" , @">" , @">=" , @"==" , @"!=" , @"=-" , @"!"] ;
@@ -60,6 +62,13 @@
     NSMutableArray * identfiers = [NSMutableArray new] ;
     for(int i = 0 ; i<_contentsOfFile.count ; i++)
     {
+        NSString * unModifiedLine = _contentsOfFile[i] ;
+        if([self isComment:unModifiedLine])
+        {
+            [specialSymbols addObject:@"//"];
+
+            continue ;
+        }
         NSString * modifiedLine = [self Split:_contentsOfFile[i]] ;
         NSArray * tokens = [self sperateTokensIn:modifiedLine] ;
         for(int x =0 ; x<tokens.count ;x++)
@@ -200,6 +209,17 @@
     [Tokens removeObject:@""] ;
     
     return Tokens ;
+}
+-(BOOL)isComment:(NSString *)line
+{
+    if([line rangeOfString:@"//"].location == NSNotFound)
+    {
+        return false ;
+    }
+    else
+    {
+        return  true ;
+    }
 }
 -(NSArray *)keywords
 {
